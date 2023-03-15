@@ -1,1 +1,52 @@
-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
+Euler Finance hacked for over $195M in a flash loan attack
+Euler Finance was exploited in a flash loan attack that drained hundreds of millions of decentralized stablecoins and synthetic ERC-20 tokens.
+Ethereum-based noncustodial lending protocol Eurler finance faced a flash loan attack on March 13, with the attacker managing to steal millions in Dai 
+DAI
+
+tickers down
+$1.00
+
+, USD Coin 
+USDC
+
+tickers down
+$1.00
+
+, staked Ether (StETH) and wrapped Bitcoin (WBTC).
+
+According to on-chain data, as per the last update, the exploiter carried out multiple transactions, stealing nearly $196 million. The ongoing attack has already become the largest hack of 2023. The breakdown of stolen funds is as follows: 
+
+
+Funds stolen from Euler Finance. Source: BlockSec.
+According to crypto analytic firm Meta Seluth, the attack correlates with the deflation attack one month ago. The attacker used a multichain bridge to transfer the funds from the BNB Smart Chain (BSC) to Ethereum and launched the attack today.
+
+
+Movement of funds from Euler Finance. Source: Meta Seluth
+ZachXBT, another prominent on-chain sleuth, reiterated the same and said that the movement of funds and the nature of the attack seems quite similar to black hats that exploited a BSC-based protocol last month. After exploiting a protocol on BSC, the funds were deposited to the crypto mixer, Tornado Cash. 
+
+Advertisement
+Stay safe in Web3. Learn more about Web3 Antivirus →
+The stolen funds are currently sitting in the following hacker addresses:
+
+0xebc29199c817dc47ba12e3f86102564d640cbf99 (Contract) - 8,877,507.34 DAI
+0xb2698c2d99ad2c302a95a8db26b08d17a77cedd4 - 8,080.97 ETH
+0xb66cd966670d962c227b3eaba30a872dbfb995db - 88,752.69 ETH & 34,186,225.91 DAI
+Euler Finance acknowledged the exploit and said they are currently working with security professionals and law enforcement to resolve the issue.
+
+
+A detailed analysis of the attack by blockchain security firm Slowmist indicates that the attacker used flash loans to deposit funds and then leveraged them twice to trigger liquidation. The exploiter donated the funds to the reserved address and conducted a self-liquidation to collect any remaining assets.
+
+There were two factors that contributed to the success of the exploit. Firstly, the funds were donated to the reserved address without being subjected to a liquidity check, triggering soft liquidation. Secondly, the soft liquidation logic was triggered by high leverage, enabling the liquidator to obtain most of the collateral funds from the liquidated user's account by transferring only a portion of the liabilities to themselves.
+
+Gustavo Gonzalez, solutions developer at the blockchain security firm OpenZeppelin, told Cointelegraph that it all happened in one transaction (one per pool) using flashloans from AAVE. He explained:
+
+"There appears to be a bug in one of the Euler smart contracts, where it doesn’t check for the health factor when executing the donateToReservers() function. Because of that, the attacker was able to liquidate himself from the protocol, repay the flashloan and make a huge profit.”
+Euler Finance raised $32 million in a funding round last year that saw participation from FTX, Coinbase, Jump, Jane Street and Uniswap.
+
+Euler Finance became quite popular for offering liquid staking derivatives (LSDs) services. LSDs are a relatively new type of token that enable stakers to augment potential returns by unlocking liquidity for staked cryptocurrency, such as Ether 
+ETH
+
+tickers down
+$1,696
+
+. Currently, LSDs make up to 20% of total value locked in decentralized finance protocols.
