@@ -12,7 +12,9 @@ Questions are welcome on the "issue" page
 #### W2 class
 
 ## 作業連結區
-#### HW1 - [Are private senior high schools better than public ones? - Data analysis of senior high schools in Taiwan.](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/HW1/HW1.ipynb)  
-(Find an education-related material by yourself, ask 10 questions and answer them)
+#### HW1 - [Are private senior high schools better than public ones? - Data analysis of senior high schools in Taiwan.](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/HW1/HW1.ipynb)  (Find an education-related material by yourself, ask 10 questions and answer them)
+1. This study compares the data of senior high schools in Taiwan in 2014(The peak of the previous business cycle) and 2020(After the impact of covid-19).
+2. Private schools have a higher teacher-student ratio than public schools in 2020.
+3. After experiencing covid-19, the numbers of teachers and students have decreased significantly. Among them, private schools have experienced the most significant reduction, but the teacher-student ratio has improved.
 ## 專題連結區
 ## 其他補充
