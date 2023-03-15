@@ -9,7 +9,9 @@ TA時間：Every Thu. 9:10\~16:20 (lunch break 11:20\~13:10) in 2023/3\~2023/6
 Questions are welcome on the "issue" page 
 
 ## 課程筆記區
-#### W2 class
+#### 2022/3/15
+Teach how to use OpenAI with [API](https://platform.openai.com/docs/guides/chat/introduction) and [Fine-Turning](https://platform.openai.com/docs/guides/fine-tuning), you can also refer to teacher's code - [Pecu's reference](https://github.com/pecu/peculab/tree/main/ChatGPT)
+
 
 ## 作業連結區
 #### HW1 - [Are private senior high schools better than public ones? - Data analysis of senior high schools in Taiwan.](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/HW1/HW1.ipynb)  (Find an education-related material by yourself, ask 10 questions and answer them)
