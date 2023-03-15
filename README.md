@@ -13,6 +13,6 @@ Questions are welcome on the "issue" page
 
 ## 作業連結區
 #### HW1 - [Are private senior high schools better than public ones? - Data analysis of senior high schools in Taiwan.](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/HW1/HW1.ipynb)  
-###### Find an education-related material by yourself, ask 10 questions and answer them
+(Find an education-related material by yourself, ask 10 questions and answer them)
 ## 專題連結區
 ## 其他補充
