@@ -19,7 +19,6 @@ Teach how to use OpenAI with [API](https://platform.openai.com/docs/guides/chat/
 2. Private schools have a higher teacher-student ratio than public schools in 2020.
 3. After experiencing covid-19, the numbers of teachers and students have decreased significantly. Among them, private schools have experienced the most significant reduction, but the teacher-student ratio has improved.
 
-#### HW2 - [Changes in Teacher-Student Ratio and Class Sizes in High School - from 2014 to 2010 in Taiwan.]
-(https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/HW2/HW2.ipynb)
+#### HW2 - [Changes in Teacher-Student Ratio and Class Sizes in High School - from 2014 to 2010 in Taiwan.](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/HW2/HW2.ipynb)
 ## 專題連結區
 ## 其他補充
