@@ -26,6 +26,7 @@ TF-IDF, LDA model : [Pecu's reference](https://github.com/pecu/LAT/blob/main/HW3
 
 #### HW3 - [Use ChatGPT and IDA Model to find the topic in recent Canada Education news](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/HW3/HW3_IDA_ChatGPT.ipynb)
 * Search education news on CBC(Canadian Broadcasting Corporation) News and analyze the most popular 3 topic
+* [nbviewer vision](https://nbviewer.org/github/AndersonTsaiTW/LAT_Repo/blob/main/HW3/HW3_IDA_ChatGPT.ipynb)
 
 ## 專題連結區
 ## 其他補充
