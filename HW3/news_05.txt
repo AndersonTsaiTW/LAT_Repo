@@ -1,0 +1,224 @@
+Content
+Skip to Main ContentAccessibility Help
+
+MENU
+Search
+Sign In
+news
+Top Stories
+Local
+Climate
+World
+Canada
+Politics
+Indigenous
+Opinion
+The National
+More 
+Teachers are split on bringing ChatGPT into elementary, high schools | CBC News Loaded
+Canada
+Teachers are split on bringing ChatGPT into elementary, high schools
+Social Sharing
+Facebook
+Twitter
+Email
+Reddit
+LinkedIn
+Educators must teach students 'when and where and how to use' new technologies, says math teacher
+Jessica Wong · CBC News · Posted: Apr 11, 2023 4:00 AM EDT | Last Updated: April 11
+
+Canadian schools grappling with use of ChatGPT
+4 days ago
+Duration2:04
+As artificial intelligence like ChatGPT begins to arrive in Canadian schools, teachers consider its impact on education. Some argue it should be banned, while others suggest making it a part of learning while focusing on critical thinking and creativity.
+
+756
+ comments
+When high school teacher Jamie Mitchell asked his students about ChatGPT this week, he wasn't surprised when the vast majority said they already knew about or had used the artificial intelligence tool that seemingly everyone is talking about.
+
+"It's everywhere. It's hard to ignore," noted the Burlington, Ont., math teacher. "Some kids are using it because … it's a fun laugh to get it to answer different questions. Some kids are using it for their schoolwork."
+
+Person holding two sheets of paper.
+An elementary student reviews an assignment written by ChatGPT. When Ontario teacher Jamie Mitchell input math problems his students were working on into the bot, it soon 'started to do really wild, crazy, wrong things,' that his students quickly picked up on. (Timothy D. Easley/The Associated Press)
+Much of the education sector's apprehension about students using ChatGPT to complete their assignments has thus far focused on the post-secondary level. OpenAI's incredibly accessible bot quickly answers user prompts with human-like responses — with varying degrees of sophistication — gleaned from vast information available online.
+
+Why regulators in Canada and Italy are digging into ChatGPT's use of personal information
+Curveball or game changer? ChatGPT, AI tools under watch on Canadian campuses
+The use of the application by students in elementary and high school is ringing alarm bells for some, while others have embraced introducing the technology to their classrooms. 
+
+Arming students with information, tools
+Mitchell, who's also program leader for mathematics, computer studies and I-STEM at his school, had ChatGPT on his radar early. Upon its public release last fall, he dived in to test the chatbot and flagged his findings in an email to colleagues that he cheekily used ChatGPT itself to write. 
+
+There can be misgivings raised about any educational tech tool — for instance, Mitchell has concerns about students using calculators for certain classes — but at this point, he believes ChatGPT to be an interesting innovation that has some limitations. And he's demonstrated that to his students.
+
+WATCH | Why this educator is teaching high schoolers about ChatGPT:
+
+​With ChatGPT 'everywhere,' this educator is teaching his students about it
+6 days ago
+Duration2:35
+​High school teacher Jamie Mitchell shares how he's discussing ChatGPT in his classroom and educating students about what it can and can't do.
+Last term, Mitchell input calculus problems his students were solving into the AI bot, then asked the teens to review the answers that emerged. 
+
+"The tool made some great first steps in solving its equations, but after it got a few steps in, it started to do really wild, crazy, wrong things that the students picked up on," he said.
+
+Though the tool may be good enough to fool people who don't understand calculus, Mitchell said because his students know the subject matter quite well, "it was almost impossible to fool them." 
+
+CBC KIDS NEWSChatGPT: How AI is changing homework
+Some students are using ChatGPT to cheat — here's how schools are trying to stop it
+He said if he discovered a student passing off a ChatGPT-completed assignment as their own, a conversation would be in order.
+
+He would review appropriate uses for the bot, note how and when it shouldn't be used and work with the student to develop a plan so the situation didn't happen again. But he doesn't believe banning ChatGPT would be effective.
+
+"The push of technology to move forward is kind of relentless," Mitchell said. "If we're not arming students with the proper tools — to know when and where and how to use these tools — well, we're doing them a big disservice."
+
+'Where's the motivation to learn?'
+Mindy Bingham hadn't heard of ChatGPT when a friend broached the topic over lunch in January.
+
+However, when the author and educational consultant subsequently found her nine-year-old granddaughter testing the bot while noodling away on a tablet, it encouraged her to investigate it herself. 
+
+As AI evolves, some Quebec teachers counter ChatGPT with their own bots
+INTERVIEWAre the AI bots taking over? Not yet — but GPT-4 is ready to do more than ever before
+"Once it gets out into the world for these young children, once they realize the power of it, it's going to reduce their motivation to learn," she said from Santa Barbara, Calif. 
+
+"Where's the motivation to learn when you know a machine can do it for you?"
+
+A woman speaks to an unseen audience at a conference, holding a report in one hand.  
+Mindy Bingham, an American author, education consultant and CEO of educational publishing company Academic Innovations, is worried that once younger students get their hands on tech like ChatGPT, they won't gain the foundational knowledge that is key in education. (Academic Innovations)
+Because ChatGPT was introduced relatively recently, many educators haven't yet heard of it, and Bingham worries tech-savvy youngsters who haven't developed a strong base of foundational knowledge and skills will use it to complete homework. 
+
+Coming up with an idea and being able to expand on it, problem-solving, analyzing content — "that's what we do in elementary school … whether it's reading, whether it's mathematics, whether it's writing," she explained. 
+
+"Critical thinking is one of the key issues here that artificial intelligence will take away." 
+
+Q&A: Why are tech insiders calling for a pause on AI development?
+AI can write essays now — what that means for Calgary universities and colleges
+Digital tools should be used to support learning, not supplant it, Bingham said. She's now tested ChatGPT thoroughly herself, and though she sees its value for adults, she's calling for caution when introducing it to classrooms.
+
+She thinks a ban in elementary schools makes sense, but acknowledges the difficulty of detecting AI-generated assignments at this stage.
+
+"Just because something is here today doesn't mean we adopt it." 
+
+WATCH | University students weigh in on ChatGPT, AI tools: 
+
+Students share their thoughts about ChatGPT and AI tools for assignments
+3 months ago
+Duration3:11
+Western University students on whether it's cheating to use ChatGPT for assignments and whether peers know about and may be already using AI tools.
+'Not a be-all, end-all,' warns university student
+Studying both computer science and journalism, Princeton University student Edward Tian has long been fascinated by artificial intelligence, specifically how it can be used for writing. 
+
+The 22-year-old Canadian considers the technology behind ChatGPT brilliant and exciting, but also ripe for abuse. So, over winter break, he created GPTZero, an AI-detector he hopes can provide some transparency.
+
+Q&ABot or not? This Canadian developed an app that weeds out AI-generated homework
+More than 45,000 teachers from over 30 countries worldwide have signed up for updates about his detector, and he said he regularly hears educators saying it's "reassuring" that he and his teammates are developing it.
+
+GPTZero works because humans write with "sudden bursts and variation of writing style," Tian explained, whereas machine writing tends to be fairly consistent. His tool essentially reads submitted texts and searches for that "burstiness" within them.
+
+A smiling young man sits before a laptop computer in the foreground, with another young man smiles before a dual monitor PC set-up, with a third appearing onscreen.
+Princeton University student Edward Tian, seen at left with colleagues, recently built an AI-detector called GPTZero. The Canadian says more than 45,000 teachers from over 30 countries around the world have signed up for updates about his tool. (Submitted by Edward Tian)
+Also a big concern for Tian is the way AI-generated technology can be used to create misinformation — "news stories that might sound like real news, but are not," he says. That's why he's working on crafting a browser extension that can flag AI-created text used in that way online.
+
+Though Tian agrees that younger students overusing ChatGPT could erode valuable core skills like writing and critical thinking, he's against bans, which he says students can easily bypass anyway. Instead, he encourages the responsible use of AI technology in education.
+
+"One hundred per cent, we should explore and be exposed to the brilliant new technologies that are coming, but they're not a be-all, end-all," he warned fellow students. 
+
+"They're great at getting you started with ideas. They're not so good at doing the job and finishing the job. They're not so good at checking if the facts are right."
+
+With files from Deana Sumanac-Johnson and Nazima Walji
+
+CBC's Journalistic Standards and Practices|About CBC News
+Corrections and clarifications|Submit a news tip|Report error
+RELATED STORIES
+Bots like ChatGPT aren't sentient. Why do we insist on making them seem like they are?
+Some students are using ChatGPT to cheat — here's how schools are trying to stop it
+Faced with criticism it's a haven for cheaters, ChatGPT adds tool to catch them
+CBC News Morning Brief
+Start the day smarter. Get the CBC News Morning Brief, the essential news you need delivered to your inbox.
+
+Email address:
+Enter your email address
+SubscribeCurrent TimeIgnore this field. If any data is entered for this field, you will not be subscribed to this newsletter.
+Popular Now in News
+1
+CBC INVESTIGATES
+Troubled Calgary builder leaves Edmonton homebuyers with mortgages to pay on unfinished homes
+355 reading now
+2
+Trudeau Foundation president, board resign, citing 'politicization' of China-linked donation
+271 reading now
+3
+Tupperware shares tank as company warns it may go out of business
+143 reading now
+4
+What we know about the leaked U.S. Pentagon documents on the Ukraine war — and potential impact
+136 reading now
+5
+Manhattan district attorney sues Republican Jim Jordan over Trump prosecution
+112 reading now
+COMMENTS
+To encourage thoughtful and respectful conversations, first and last names will appear with each submission to CBC/Radio-Canada's online communities (except in children and youth-oriented communities). Pseudonyms will no longer be permitted.
+
+By submitting a comment, you accept that CBC has the right to reproduce and publish that comment in whole or in part, in any manner CBC chooses. Please note that CBC does not endorse the opinions expressed in comments. Comments on this story are moderated according to our Submission Guidelines. Comments are welcome while open. We reserve the right to close comments at any time.
+
+Become a CBC Account Holder
+Join the conversation  Create account
+
+Already have an account?Log in
+
+Loading...
+Footer Links
+My Account
+Profile
+CBC Gem
+Newsletters
+About CBC Accounts
+Connect with CBC
+Facebook
+Twitter
+YouTube
+Instagram
+Mobile
+RSS
+Podcasts
+Contact CBC
+Submit Feedback
+Help Centre
+Audience Relations, CBC
+P.O. Box 500 Station A
+Toronto, ON
+Canada, M5W 1E6
+
+Toll-free (Canada only):
+1-866-306-4636
+
+About CBC
+Corporate Info
+Sitemap
+Reuse & Permission
+Terms of Use
+Privacy
+Jobs
+Our Unions
+Independent Producers
+Political Ads Registry
+AdChoices
+Services
+Ombudsman
+Corrections and Clarifications
+Public Appearances
+Commercial Services
+CBC Shop
+Doing Business with Us
+Renting Facilities
+Radio Canada International
+CBC Lite
+Accessibility
+It is a priority for CBC to create products that are accessible to all in Canada including people with visual, hearing, motor and cognitive challenges.
+
+Closed Captioning and Described Video is available for many CBC shows offered on CBC Gem.
+
+About CBC Accessibility
+Accessibility Feedback
+
+©2023 CBC/Radio-Canada. All rights reserved.
+Visitez Radio-Canada.ca
