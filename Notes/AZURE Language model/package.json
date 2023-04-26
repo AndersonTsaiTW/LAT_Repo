@@ -1,0 +1,19 @@
+{
+  "name": "azure-language-model",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "debug": "node --inspect index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/ai-text-analytics": "^5.1.0",
+    "@line/bot-sdk": "^7.5.2",
+    "config": "^3.3.9",
+    "express": "^4.18.2"
+  }
+}
