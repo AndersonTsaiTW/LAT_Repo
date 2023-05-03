@@ -14,9 +14,8 @@ Teach how to use OpenAI with [API](https://platform.openai.com/docs/guides/chat/
 #### 2023/3/29
 TF-IDF, LDA model : [Pecu's reference](https://github.com/pecu/LAT/blob/main/HW3/TextMining.ipynb)
 #### 2023/4/26
-Use Microsoft AZURE Language Model and LineBot to build an simple test  
-[References](https://mobiledev.tw/language-service-hotel-review-bot/)  
-[Use NodeJS](https://nodejs.org/zh-tw)
+Use Microsoft AZURE Language Model and LineBot to build an simple test : [Link](https://github.com/AndersonTsaiTW/LAT_Repo/tree/main/Notes/AZURE%20Language%20model)  
+[References](https://mobiledev.tw/language-service-hotel-review-bot/), [Use NodeJS](https://nodejs.org/zh-tw)
 
 
 ## 作業連結區
