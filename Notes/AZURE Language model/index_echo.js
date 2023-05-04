@@ -1,3 +1,5 @@
+//in terminal run ./ngrok http 3001
+//port is 3001
 'use strict';
 const line = require('@line/bot-sdk'),
       express = require('express'),

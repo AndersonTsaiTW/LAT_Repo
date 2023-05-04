@@ -37,9 +37,14 @@ async function MS_TextSentimentAnalysis(thisEvent){
     const results = await analyticsClient.analyzeSentiment(documents);
     console.log("[results] ", JSON.stringify(results));
 
+    //回傳內容改變
+    const score = results[0].confidenceScores['positive'];
+    const state = results[0].sentiment
+
     const echo = {
       type: 'text',
-      text: results[0].sentiment
+      text: `謝謝你提供了一個 ${state === 'neutral' ? '中性' : state === 'positive' ? '正向' : state === 'negative' ? '負面':''} 
+      的回饋意見，正向指數 ${score}`
     };
     return client.replyMessage(thisEvent.replyToken, echo);
 
