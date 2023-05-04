@@ -35,9 +35,7 @@ async function MS_TextSentimentAnalysis(thisEvent){
     // documents.push("熱水都不熱，爛死了，很生氣！");
     // documents.push("房間陳設一般般");
     const results = await analyticsClient.analyzeSentiment(documents);
-    //const results = await analyticsClient.AnalyzeSentimentOptions(documents);
     console.log("[results] ", JSON.stringify(results));
-    
 
     //回傳內容改變
     const score = results[0].confidenceScores;
