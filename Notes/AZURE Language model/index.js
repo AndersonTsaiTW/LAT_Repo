@@ -72,6 +72,7 @@ async function MS_TextSentimentAnalysis(thisEvent){
     const score = results[0].confidenceScores[results[0].sentiment];
     const object = newData.opinionText;
 
+    //If the model can't find the topic, then turn to the general answer
     let object_adj = "";
     if (object === ""){
       object_adj = "相關"
@@ -79,6 +80,7 @@ async function MS_TextSentimentAnalysis(thisEvent){
       object_adj = object
     }
     
+    //Use different answers according to the nature of the message
     let feedbackType = '';
     let feedback = '';
     if (state === 'neutral') {
@@ -92,8 +94,7 @@ async function MS_TextSentimentAnalysis(thisEvent){
       feedback = "立刻進行改善，並向您致上誠摯的歉意。";
     }
 
-
-
+    //Give three different answer forms to meet assignment requirements
     const echo1 = {
       type: 'text',
       text: state
