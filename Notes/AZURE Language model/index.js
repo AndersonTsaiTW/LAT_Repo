@@ -1,6 +1,7 @@
 'use strict';
 const line = require('@line/bot-sdk'),
       express = require('express'),
+      axios = require('axios'),
       configGet = require('config');//({
 //        path: '/Users/anderson/Desktop/Data Science/config/default.json' //指定檔案的絕對路徑
 //      });
@@ -40,7 +41,31 @@ async function MS_TextSentimentAnalysis(thisEvent){
     });
     //const results = await analyticsClient.AnalyzeSentimentOptions(documents);
     console.log("[results] ", JSON.stringify(results));
-    
+    //save to Json Server
+    let newData = {
+      "sentiment":results[0].sentiment,
+      "confidenceScore":results[0].confidenceScores[results[0].sentiment],
+      "opinionText":""
+    };
+
+    if (results[0].sentences[0].opinions.length!=0){
+      newData.opinionText = results[0].sentences[0].opinions[0].target.text;
+    }
+    let axios_add_data = {
+      method:"post",
+      url:"https://yakitateenglish.azurewebsites.net/reviews",
+      headers:{
+        "content-type":"application/json"
+      },
+      data:newData
+    };
+
+    axios(axios_add_data)
+    .then(function(response){
+      console.log(JSON.stringify(response.data));
+    })
+    .catch(function(){console.log("error");});
+
 
     //回傳內容改變
     const score = results[0].confidenceScores;
