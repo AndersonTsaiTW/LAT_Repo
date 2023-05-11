@@ -30,6 +30,11 @@ Use Microsoft AZURE Language Model and LineBot to build an simple test : [Link](
 #### HW3 - [Use ChatGPT and IDA Model to find the topic in recent Canada Education news](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/HW3/HW3_IDA_ChatGPT.ipynb)
 * Search education news on CBC(Canadian Broadcasting Corporation) News and analyze the most popular 3 topic
 * [nbviewer vision](https://nbviewer.org/github/AndersonTsaiTW/LAT_Repo/blob/main/HW3/HW3_IDA_ChatGPT.ipynb)
+  
+#### HW4 - [Customer Review Sentiment Analysis Bot](https://github.com/AndersonTsaiTW/LAT_Repo/tree/main/Notes/AZURE%20Language%20model)
+* [the readme.md](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/readme.md): Documentation showing the results of program execution 
+* Using line's virtual identity, combined with Azure's emotion discrimination and message topic extraction functions, automatically analyze customer feedback messages: [code](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/index.js)
+* Combined with the JSON SERVER provided by AZURE, the analysis results are stored in the cloud, and plotly is used to make simple analysis charts: [code - html](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/index.html), [code - js](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/main.js)
 
 ## 專題連結區
 ## 其他補充
