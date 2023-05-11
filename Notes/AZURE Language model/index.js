@@ -68,20 +68,45 @@ async function MS_TextSentimentAnalysis(thisEvent){
 
 
     //回傳內容改變
-    const score = results[0].confidenceScores;
     const state = results[0].sentiment;
+    const score = results[0].confidenceScores[results[0].sentiment];
+    const object = newData.opinionText;
+
+    let object_adj = "";
+    if (object === ""){
+      object_adj = "相關"
+    } else {
+      object_adj = object
+    }
+    
+    let feedbackType = '';
+    let feedback = '';
+    if (state === 'neutral') {
+      feedbackType = '中性',
+      feedback = "進行了解。";
+    } else if (state === 'positive') {
+      feedbackType = '正向',
+      feedback = "向您致上誠摯的感謝。";
+    } else if (state === 'negative') {
+      feedbackType = '負面',
+      feedback = "立刻進行改善，並向您致上誠摯的歉意。";
+    }
+
+
 
     const echo1 = {
       type: 'text',
-      text: `謝謝你提供了一個 ${state === 'neutral' ? '中性' : state === 'positive' ? '正向' : state === 'negative' ? '負面':''} 
-      的回饋意見，正向指數 ${score["positive"]}`
+      text: state
     };
     const echo2 = {
       type: 'text',
-      text: `謝謝你提供了一個 ${state === 'neutral' ? '中性' : state === 'positive' ? '正向' : state === 'negative' ? '負面':''} 
-      的回饋意見，正向指數 ${score["positive"]}`
+      text: `謝謝你提供了一個 ${feedbackType} 的回饋意見，${feedbackType}指數 ${score}`
     };
-    return client.replyMessage(thisEvent.replyToken, [echo1,echo2]);
+    const echo3 = {
+      type: 'text',
+      text: `謝謝你提供了一個關於 ${object} 的 ${feedbackType} 回饋意見，${feedbackType}指數 ${score}。我們會盡快請 ${object_adj} 的負責單位 ${feedback}`
+    };
+    return client.replyMessage(thisEvent.replyToken, [echo1,echo2,echo3]);
 
 
 }
