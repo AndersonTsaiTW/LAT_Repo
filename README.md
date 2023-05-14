@@ -10,7 +10,7 @@ Questions are welcome on the "issue" page
 
 ## 課程筆記區
 #### 2023/3/15
-Teach how to use OpenAI with [API](https://platform.openai.com/docs/guides/chat/introduction) and [Fine-Turning](https://platform.openai.com/docs/guides/fine-tuning), you can also refer to teacher's code - [Pecu's reference](https://github.com/pecu/peculab/tree/main/ChatGPT)
+Teach how to use OpenAI with [API](https://platform.openai.com/docs/guides/chat/introduction) and [Fine-Tuning](https://platform.openai.com/docs/guides/fine-tuning), you can also refer to teacher's code - [Pecu's reference](https://github.com/pecu/peculab/tree/main/ChatGPT)
 #### 2023/3/29
 TF-IDF, LDA model : [Pecu's reference](https://github.com/pecu/LAT/blob/main/HW3/TextMining.ipynb)
 #### 2023/4/26
