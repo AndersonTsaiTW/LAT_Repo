@@ -37,4 +37,5 @@ Use Microsoft AZURE Language Model and LineBot to build an simple test : [Link](
 * Combined with the JSON SERVER provided by AZURE, the analysis results are stored in the cloud, and plotly is used to make simple analysis charts: [code - html](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/index.html), [code - js](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/main.js)
 
 ## 專題連結區
+* [Folder](https://github.com/AndersonTsaiTW/LAT_Repo/tree/main/Mini_Hackathon)
 ## 其他補充
