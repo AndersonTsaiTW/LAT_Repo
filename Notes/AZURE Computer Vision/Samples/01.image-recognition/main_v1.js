@@ -9,12 +9,11 @@ function processImage() {
     
     //確認區域與所選擇的相同或使用客製化端點網址
     var url = "https://eastus.api.cognitive.microsoft.com/";
-    var uriBase = url + "vision/v2.1/describe";
+    var uriBase = url + "vision/v2.1/analyze";
     
     var params = {
-        //"visualFeatures": "Faces,Adult,Brands,Categories,Description,Color",
-        //"details": "landmarks",
-        "maxCandidates":"10",
+        "visualFeatures": "Faces,Adult,Brands,Categories,Description,Color",
+        "details": "landmarks",
         "language": "zh",
     };
     //顯示分析的圖片
@@ -36,10 +35,8 @@ function processImage() {
         //顯示JSON內容
         $("#responseTextArea").val(JSON.stringify(data, null, 2));
         $("#picDescription").empty();
-        for (var x = 0; x < data.description.captions.length; x++){
-        $("#picDescription").append(data.description.captions[x].text+"<br>");
-        }
-        //$("#picDescription").append("這裡有"+data.faces.length+"個人");
+        $("#picDescription").append(data.description.captions[0].text+"<br>");
+        $("#picDescription").append("這裡有"+data.faces.length+"個人");
     })
     .fail(function(jqXHR, textStatus, errorThrown) {
         //丟出錯誤訊息
