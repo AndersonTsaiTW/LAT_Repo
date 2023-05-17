@@ -1,2 +1,2 @@
 //請填上申請好的API KEY
-const subscriptionKey = "8";
+const subscriptionKey = "8f";
