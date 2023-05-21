@@ -69,13 +69,17 @@ def bread_identify(img_url):
         feedback = 'download error'
         return feedback
 
+"""主程式"""
+def breadpredict(img_url):
+    img_det = img_identify(img_url)
+    print(img_det)
+    if(img_det == 'yes'):
+        bread = bread_identify(img_url)
+    else:
+        bread = 'error'
+    return bread
+
 #images_folder = os.path.join (os.path.dirname(os.path.abspath(__file__)), "images")
 image_url = "https://i.postimg.cc/xjkRY5jt/2.jpg"
-
-img_det = img_identify(image_url)
-print(img_det)
-if(img_det == 'yes'):
-    bread = bread_identify(image_url)
-    print(bread)
-else:
-    print('error')
+abc = breadpredict(image_url)
+print(abc)
