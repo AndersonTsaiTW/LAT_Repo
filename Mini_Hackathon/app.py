@@ -1,10 +1,4 @@
 # app.py
-# reference_1:https://www.youtube.com/watch?v=i8ncIcJs-LA&ab_channel=Maso%E7%9A%84%E8%90%AC%E4%BA%8B%E5%B1%8B
-# reference_2:https://www.youtube.com/watch?v=uqkJmsb8UIY&ab_channel=Maso%E7%9A%84%E8%90%AC%E4%BA%8B%E5%B1%8B
-# reference_3:https://ithelp.ithome.com.tw/users/20142564/articles
-# reference_Flask:https://devs.tw/post/448
-
-
 from flask import Flask, request, abort
 
 from linebot import (
@@ -17,10 +11,12 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 
+import chatgptENG
+
 app = Flask(__name__)
 
-line_bot_api = LineBotApi('YOUR_CHANNEL_ACCESS_TOKEN')
-handler = WebhookHandler('YOUR_CHANNEL_SECRET')
+line_bot_api = LineBotApi('23uRE8qB1LbXm8pngifTyRsCVqzW6voA1XPT7hPkHkPbjVqwv6mEB0yERdS272A0gTVLO+78v/13izdnyxkmETscJbqy8HwcfuLD4DJQkHn9xzKH69eSNmelW2ssiOm21Ez+L+5SdZd/O4xRcycNnQdB04t89/1O/w1cDnyilFU=')
+handler = WebhookHandler('d1793208aa7e0d0716a1a4d90a04dbff')
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -45,8 +41,9 @@ def callback():
 def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text))
+        TextSendMessage(text=chatgptENG.chatgptfn("pineapple bun").choices[0].message.content))
+#        TextSendMessage(text=event.message.text))
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=3001)

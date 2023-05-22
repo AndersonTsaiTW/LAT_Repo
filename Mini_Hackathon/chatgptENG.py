@@ -10,8 +10,8 @@ def chatgptfn(sub_list):
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are an assistant"},
-            {"role": "user", "content": f"{sub_list} :give me a summary"},
-            {"role": "assistant", "content": "Bread is a food of great historical significance and cultural value in the West"}
+            {"role": "user", "content": f"{sub_list} :給我一個格式類似字典的單字介紹，包含這個物品的歷史故事、產地、文化意涵等內容，並且以中文及英文提供。"},
+        #    {"role": "assistant", "content": "Bread is a food of great historical significance and cultural value in the West"}
  
         ]
     )
