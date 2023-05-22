@@ -72,14 +72,15 @@ def bread_identify(img_url):
 """主程式"""
 def breadpredict(img_url):
     img_det = img_identify(img_url)
-    print(img_det)
+#    print(img_det)
     if(img_det == 'yes'):
         bread = bread_identify(img_url)
+#        print(bread)
     else:
         bread = 'error'
     return bread
 
 #images_folder = os.path.join (os.path.dirname(os.path.abspath(__file__)), "images")
-image_url = "https://i.postimg.cc/xjkRY5jt/2.jpg"
-abc = breadpredict(image_url)
-print(abc)
+#image_url = "https://i.postimg.cc/xjkRY5jt/2.jpg"
+#abc = breadpredict(image_url)
+#print(abc)

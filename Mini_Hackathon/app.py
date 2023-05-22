@@ -11,7 +11,12 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 
+#import project seperate models
 import chatgptENG
+import brtestpr1
+
+#set the local port number
+local_port = 3001
 
 app = Flask(__name__)
 
@@ -39,11 +44,19 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    image_url = event.message.text
+    #use bread identify program to get bread tag
+    breadtag = brtestpr1.breadpredict(image_url)
+    print(breadtag)
+    #send bread tag to chatGPT to catch the chinese and english introduction
+    reply_text = chatgptENG.chatgptfn(breadtag)
+    print(reply_text)
+    #use line bot to reply the chatGPT answer
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=chatgptENG.chatgptfn("pineapple bun").choices[0].message.content))
+        TextSendMessage(text=reply_text.choices[0].message.content))
 #        TextSendMessage(text=event.message.text))
 
 
 if __name__ == "__main__":
-    app.run(port=3001)
+    app.run(port=local_port)
