@@ -16,7 +16,7 @@ from PIL import Image
 import sys
 import time
 
-"""
+
 '''
 Authenticate
 Authenticates your credentials and creates a client.
