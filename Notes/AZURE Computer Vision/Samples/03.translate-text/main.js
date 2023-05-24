@@ -6,7 +6,6 @@ $(document).ready(function(){
 });
 
 function processTranslate() {
-    
     let uriBase = "https://api.cognitive.microsofttranslator.com/translate";
     let params = {
         "api-version": "3.0",
@@ -33,7 +32,7 @@ function processTranslate() {
         //顯示JSON內容
         $("#responseTextArea").val(JSON.stringify(data, null, 2));
         //修改下面這一行將翻譯結果顯示於右方
-        $("#translateResult").text();
+        $("#translateResult").text(data[0].translations[0].text);
     })
     .fail(function(jqXHR, textStatus, errorThrown) {
         //丟出錯誤訊息
