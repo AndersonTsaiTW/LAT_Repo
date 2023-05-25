@@ -23,9 +23,11 @@ local_port = 3001
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi('k3CowvkvvyCvpDNIdK5YhgGmjjCzSQUkJtpT9ws7f4sHzCazokmxAnr5Asyx9Nh6LWYmeNnzTHATunFsY4j3EYi+Ig2n0h/USG8PYaM7zQ75iGyxLm6L9bsWcPuq1fglAQ6mwqF0XzQi8ahqnORPeAdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('39eb7c44608310ae94a1258853b0322a')
+line_bot_api = LineBotApi('23uRE8qB1LbXm8pngifTyRsCVqzW6voA1XPT7hPkHkPbjVqwv6mEB0yERdS272A0gTVLO+78v/13izdnyxkmETscJbqy8HwcfuLD4DJQkHn9xzKH69eSNmelW2ssiOm21Ez+L+5SdZd/O4xRcycNnQdB04t89/1O/w1cDnyilFU=')
+handler = WebhookHandler('d1793208aa7e0d0716a1a4d90a04dbff')
+
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
+
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
