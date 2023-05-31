@@ -6,7 +6,9 @@ openai.api_key = key
 
 #導入麵包清單，如果不在清單裡面，則根本不送到chatGPT
 import config
-#print(config.breadlist)
+#print(config.breadlist) #檢查麵包類型讀取使用
+import json
+record_file = "Bread_chat.json"
 
 def chatgptfn(sub_list):
     #進行麵包種類是否在清單中的判斷
@@ -20,11 +22,28 @@ def chatgptfn(sub_list):
     
             ]
         )
-        return response
+        print(response)
+        return response.choices[0].message.content
     else:
         return "很抱歉，無法識別您所輸入的圖片。"
 
 
+def breadchatrecord(bread_tag,chat_reply,rate):
+    sub_list = bread_tag
+    new_chat = [chat_reply,[rate]]
+    with open(record_file, "r") as file:
+        existing_data = json.load(file)
+        # 檢查麵包類別是否已存在
+        if sub_list in existing_data:
+            # 將新的描述加入現有的類別中
+            existing_data[sub_list].append(new_chat)
+        else:
+            # 若麵包類別不存在，則建立新的類別與描述
+            existing_data[sub_list] = [new_chat]
 
-print(chatgptfn("pineapple_bun"))
+    # 寫入更新後的資料至JSON檔案
+    with open(record_file, "w") as file:
+        json.dump(existing_data, file)
+
+#print(chatgptfn("pineapple_bun"))
 #print(chatgptfn("天天開心"))
