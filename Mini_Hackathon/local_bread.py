@@ -16,7 +16,6 @@ import sys
 import time
 
 import requests
-import config
 
 def img_identify(img_url):
     subscription_key = "b9e345f19fc64b31a67332059b32ce56"
@@ -58,7 +57,7 @@ def bread_identify(img_url):
         #image_data = response1.content
         
     # 發送預測請求
-    response2 = requests.post(config.azuremodel, headers=headers, data=image_data)  # 將 '<prediction endpoint URL>' 替換為預測端點的 URL
+    response2 = requests.post('https://test202304240853-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/b8fac83d-ed5b-4ce9-be83-00ed0a1e4445/classify/iterations/bread0527/image', headers=headers, data=image_data)  # 將 '<prediction endpoint URL>' 替換為預測端點的 URL
     
     # 處理回應
     if response2.status_code == 200:

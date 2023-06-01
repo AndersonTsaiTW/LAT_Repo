@@ -1,5 +1,5 @@
 import openai
-keyfile = open("C:/Python36/Mini_Hackathon(0523_ok)/key.txt", "r")
+keyfile = open("key.txt", "r")
 # "C:\Python36\Mini_Hackathon(0523可執行) - 複製"
 key = keyfile.readline()
 openai.api_key = key

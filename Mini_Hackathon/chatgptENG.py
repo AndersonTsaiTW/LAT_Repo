@@ -4,27 +4,26 @@ keyfile = open("key.txt", "r")
 key = keyfile.readline()
 openai.api_key = key
 
-#導入麵包清單，如果不在清單裡面，則根本不送到chatGPT
-import config
-#print(config.breadlist)
-
 def chatgptfn(sub_list):
-    #進行麵包種類是否在清單中的判斷
-    if sub_list in config.breadlist:
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are an assistant"},
-                {"role": "user", "content": f"{sub_list} :請介紹這個麵包的(1)歷史故事、(2)產地與文化意涵、(3)製作方式等內容，並提供中文及英文版本。"},
-            #    {"role": "assistant", "content": "Bread is a food of great historical significance and cultural value in the West"}
-    
-            ]
-        )
-        return response
-    else:
-        return "很抱歉，無法識別您所輸入的圖片。"
+    print(sub_list)
+#    result = ''
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {"role": "system", "content": "You are an assistant"},
+            {"role": "user", "content": f"{sub_list} :請介紹這個東西的歷史故事、產地、文化意涵等內容，並提供繁體中文及英文版本。"},
+        #    {"role": "assistant", "content": "Bread is a food of great historical significance and cultural value in the West"}
+ 
+        ]
+    )
+    #for choice in response.choices:
+    #    result += choice.message.content
+    return response
 
-
-
-print(chatgptfn("pineapple_bun"))
-#print(chatgptfn("天天開心"))
+    #Input a paragraph into ChatGPT and display the returned summary
+#for i in range(20,len(data)):
+#    data[i] = chatgptfn(data[i])
+#    print(i)
+#    print(data[i])
+#
+# print(chatgptfn("pineapple bun"))
