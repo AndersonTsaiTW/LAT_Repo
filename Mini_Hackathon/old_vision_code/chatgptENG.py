@@ -11,7 +11,7 @@ def chatgptfn(sub_list):
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are an assistant"},
-            {"role": "user", "content": f"{sub_list} :請介紹這個東西的歷史故事、產地、文化意涵等內容，並提供繁體中文及英文版本。"},
+            {"role": "user", "content": f"{sub_list} :請用繁體中文介紹這個東西的歷史故事、產地、文化意涵等內容，並提供英文翻譯版本。"},
         #    {"role": "assistant", "content": "Bread is a food of great historical significance and cultural value in the West"}
  
         ]
