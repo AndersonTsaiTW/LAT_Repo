@@ -141,11 +141,21 @@ def handle_message(event):
             '''
             #content = 
             pic_copy = True
-            line_bot_api.reply_message(event.reply_token, 
-            TextSendMessage(text="真抱歉，我們會再努力，那這張照片是以下這些麵包的其中一種嗎？\n請幫我打英文告訴我喔，謝謝你的幫忙～\n"
-            +str(config.breaddict)))
 
-        elif event.message.text in config.breaddict and rec and pic and pic_copy:
+            content = "真抱歉，我們會再努力，那這張照片是以下這些麵包的其中一種嗎？\n請幫我輸入他們的英文名稱告訴我喔，謝謝你的幫忙～\n"
+
+            breadlist_msg = ""
+            a = 1
+            for i in config.breaddict:
+                breadlist_msg = breadlist_msg + "\n" + str(a) + ". " + config.breaddict[i] +"：請輸入  " + i
+                a = a + 1
+            
+            content_last = "\n\n如果都不是這些麵包，請幫我輸入  all_wrong"
+
+            line_bot_api.reply_message(event.reply_token, 
+            TextSendMessage(text=content+breadlist_msg+content_last))
+
+        elif (event.message.text in config.breaddict or event.message.text == "all_wrong") and rec and pic and pic_copy:
 
             target_folder = "./update/{}/".format(event.message.text)
             current_time = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
