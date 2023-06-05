@@ -63,7 +63,7 @@ def bread_identify(img_url):
         image_data = response1.content
         
         # 發送預測請求
-        response2 = requests.post(config.azure_brmodel_endpoint, headers=headers, data=image_data)  # 將 '<prediction endpoint URL>' 替換為預測端點的 URL
+        response2 = requests.post(config.azure_brmodel_img_store, headers=headers, data=image_data)  # 將 '<prediction endpoint URL>' 替換為預測端點的 URL
         
         # 處理回應
         if response2.status_code == 200:

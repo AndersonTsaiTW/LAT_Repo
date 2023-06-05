@@ -4,7 +4,7 @@ channel_secret = "d1793208aa7e0d0716a1a4d90a04dbff"
 azure_model_endpoint = "https://test202304240802.cognitiveservices.azure.com/"
 azure_model_key = "b9e345f19fc64b31a67332059b32ce56"
 
-azure_brmodel_endpoint = "https://test202304240853-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/b8fac83d-ed5b-4ce9-be83-00ed0a1e4445/classify/iterations/bread0527/image"
+azure_brmodel_img_store = "https://test202304240853-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/b8fac83d-ed5b-4ce9-be83-00ed0a1e4445/classify/iterations/bread0527/image"
 azure_brmodel_key = "ecfbb2ef04c74d11aef28648001e5976"
 
 google_api_key = 'AIzaSyCnXqX2MVkzGHxiUtmez4MHtAxDk8qN5u0'

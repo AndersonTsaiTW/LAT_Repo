@@ -10,9 +10,10 @@ from geopy.distance import geodesic
 import os
 import requests
 import datetime
+import random
 
 #自行寫作的功能部件
-import old_vision_code.chatgptENG as chatgptENG
+#import old_vision_code.chatgptENG as chatgptENG
 import chatgptENG_cal
 #import brtestpr1
 import url_bread
@@ -42,23 +43,29 @@ def callback():
         abort(400)
 
     return 'OK'
-
+#紀錄待寫入的全域變數與開關區
+#麵包種類
 breadtag_rec = ""
+#chatGPT回應
 reply_rec = ""
+#是否要紀錄(如果麵包分類錯誤就不紀錄訊息)
 rec = False
+#是否為照片
 pic = False
+#照片位置
 path_rec = ""
+#要不要儲存這張照片(分類錯誤要儲存，之後update模型用)
 pic_copy = False
+#是不是fakeGPT的假訊息，是的話要進直接紀錄評價流程
+fake = False
+#如果是fakeGPT訊息，那是第幾號訊息，index為何
+index_rec = ""
 
 @handler.add(MessageEvent, message=(ImageMessage,TextMessage,LocationMessage))
 def handle_message(event):
-    global breadtag_rec, reply_rec, rec, pic, path_rec, pic_copy
-    print(breadtag_rec)
-    print(reply_rec[0:10])
-    print(rec)  
-    print(pic)
-    print(path_rec) 
-    print(pic_copy) 
+    #宣告全域變數，並監控全域變數狀態
+    global breadtag_rec, reply_rec, rec, pic, path_rec, pic_copy, fake, index_rec
+    print(breadtag_rec, reply_rec[0:10], rec, pic, path_rec, pic_copy, fake, index_rec) 
     #判斷網址的狀況，並把網址送入azure分析後，到chatGPT產結果回傳
     if isinstance(event.message, TextMessage):
         if event.message.text.startswith("https:"):
@@ -71,7 +78,21 @@ def handle_message(event):
                 line_bot_api.reply_message(event.reply_token,
                 TextSendMessage(text="這圖片裡好像找不到麵包？"))
             else:
-                reply_text = chatgptENG_cal.chatgptfn(breadtag)
+                #用fakeGPT取出這種麵包有幾筆記錄，目前的回覆評價加總是多少
+                fakegpt = chatgptENG_cal.fakegptfn(breadtag)
+                #計算仍要使用chatGPT的機率，至少保持20%以便讓新的回應能夠生成
+                #把chatGPT回應的價值度預設為5，再去計算這個回應佔限有價值度多少
+                #如果現在一個有效回應都沒有，或是儲存的回應都是0分，會100%取chatGPT產回應
+                #隨著有效回應越來越多，會持續減少使用chatGPT的數量到20%
+                real_p = max(0.2, 5 / (fakegpt[0]+5))
+                rate = random.random()
+                if rate > real_p:
+                    reply_text = fakegpt[2]
+
+                    index_rec = fakegpt[1]
+                    fake = True
+                else:
+                    reply_text = chatgptENG_cal.chatgptfn(breadtag)
 
                 breadtag_rec = breadtag
                 reply_rec = reply_text
@@ -93,14 +114,27 @@ def handle_message(event):
                 # 回复答案消息和滿意度評價選單消息
                 line_bot_api.reply_message(event.reply_token, 
                 [TextSendMessage(text=reply_text), satisfaction_message])
-                print(breadtag_rec)
-                print(reply_rec[0:10])
-                print(rec)
+                #print(breadtag_rec)
+                #print(reply_rec[0:10])
+                #print(rec)
                 #return breadtag_rec, reply_rec, rec
 
         ###以下是儲存程式碼區###
+        #如果是fakeGPT的假訊息，紀錄回覆評價，無論他是什麼值
+        #因為他條件最多，所以要放最前面
+        elif event.message.text in ["2","1","0","-1"] and rec and fake:
+            line_bot_api.reply_message(event.reply_token, 
+            TextSendMessage(text="謝謝你，我們會再努力"))
+            chatgptENG_cal.breadfakerecord(breadtag_rec, index_rec, int(event.message.text))
+            breadtag_rec = ""
+            reply_rec = ""
+            rec = False
+            pic = False
+            fake = False
+            index_rec = ""
+
         #用戶如果還算滿意就記錄起來
-        elif event.message.text in ["2","1"] and rec:
+        elif event.message.text in ["2","1","0"] and rec:
             line_bot_api.reply_message(event.reply_token, 
             TextSendMessage(text="謝謝你，我們會再努力"))
             chatgptENG_cal.breadchatrecord(breadtag_rec, reply_rec, int(event.message.text))
@@ -177,7 +211,7 @@ def handle_message(event):
             pic_copy = False
 
         #用戶不滿意就說抱歉，不記錄，並且清空全域變量
-        elif event.message.text in ['0','-1'] and rec:
+        elif event.message.text == '-1' and rec:
             line_bot_api.reply_message(event.reply_token, 
             TextSendMessage(text="真抱歉，我們會再努力"))
             #reset全域變數
@@ -185,6 +219,7 @@ def handle_message(event):
             reply_rec = ""
             rec = False
             pic = False
+        
 
         ###以上是儲存程式碼區###
 
@@ -366,33 +401,46 @@ def handle_message(event):
         directory = './static/'
         existing_images = len(os.listdir(directory))
         next_image_number = existing_images + 1
+        print(next_image_number)
         image_number_str = str(next_image_number).zfill(4)
         image_name = image_number_str + '.jpg'
         #記錄這張照片的位置，寫成path
         path = directory + image_name
-
+        #把照片存到指定的資料夾裡面
         with open(path, 'wb') as fd:
             for chunk in image_content.iter_content():
                 fd.write(chunk)
-        #directory = './static/'
-        #existing_images = len(os.listdir(directory))
-        #image_number_str = str(existing_images).zfill(4)
-        #image_name = image_number_str + '.jpg'
+
         image_url = os.path.join(directory, image_name)
         breadtag = local_bread.breadpredict(image_url)
         if breadtag == 'no_bread':
             line_bot_api.reply_message(event.reply_token,
             TextSendMessage(text="這圖片裡好像找不到麵包？"))
         else:
-            reply_text = chatgptENG_cal.chatgptfn(breadtag)
-
+            #用fakeGPT取出這種麵包有幾筆記錄，目前的回覆評價加總是多少
+            fakegpt = chatgptENG_cal.fakegptfn(breadtag)
+            #計算仍要使用chatGPT的機率，至少保持20%以便讓新的回應能夠生成
+            #把chatGPT回應的價值度預設為5，再去計算這個回應佔限有價值度多少
+            #如果現在一個有效回應都沒有，或是儲存的回應都是0分，會100%取chatGPT產回應
+            #隨著有效回應越來越多，會持續減少使用chatGPT的數量到20%
+            real_p = max(0.2, 5 / (fakegpt[0]+5))
+            rate = random.random()
+            if rate > real_p:
+                reply_text = fakegpt[2]
+                #fakeGPT全域變數啟動
+                index_rec = fakegpt[1]
+                fake = True
+            else:
+                reply_text = chatgptENG_cal.chatgptfn(breadtag)
+            #全域變數：麵包tag紀錄、回覆訊息記錄、紀錄開關open
+            #全域變數：圖片開關open、圖像檔path紀錄
             breadtag_rec = breadtag
             reply_rec = reply_text
             rec = True
             pic = True
             path_rec = path
 
-            print("correct")
+            #回饋選單
             satisfaction_message = TemplateSendMessage(
                 alt_text='滿意程度評價',
                 template=ButtonsTemplate(
@@ -405,14 +453,9 @@ def handle_message(event):
                     ]
                 )
             )
-            # 回复答案消息和滿意度評價選單消息
+            # 回覆答案消息和滿意度評價選單消息
             line_bot_api.reply_message(event.reply_token, 
             [TextSendMessage(text=reply_text), satisfaction_message])
-            print(breadtag_rec)
-            print(reply_rec[0:10])
-            print(rec)
-            print(pic)
-            print(path_rec)
 
     elif isinstance(event.message, LocationMessage):
         #已經另外寫作nearby_bakeries.py，輸入經緯度即可得到最近的三家麵包店列表
@@ -465,42 +508,5 @@ def handle_message(event):
         # 回覆訊息給使用者
         line_bot_api.reply_message(event.reply_token, carousel_message)
 
-'''
-actions = []
-for content in config.breaddict:
-    action = MessageTemplateAction(label=config.breaddict[content],text=content)
-    actions.append(action)
-print(actions)
-'''
-
 if __name__ == "__main__":
     app.run(port=local_port)
-
-
-'''
-        bread_names = ["法式長棍麵包", "羊角麵包", "甜甜圈", "蜂蜜羅宋", "羅塞達麵包", "黃金菠蘿包", "布裡麵包",
-                       "鄉村麵包", "凱撒森梅爾", "全麥麵包"]
-        for bread_name in bread_names:
-            if bread_name in event.message.text:
-                reply_text = chatgptENG.chatgptfn(bread_name)
-                line_bot_api.reply_message(
-                    event.reply_token,
-                    TextSendMessage(text=reply_text.choices[0].message.content))
-'''
-
-
-
-'''
-        if re.match('告訴我秘密', event.message.text):
-            message = text = event.message.text
-            if re.match('告訴我秘密', message):
-                location_message = LocationSendMessage(
-                    title='日治時期的古蹟',
-                    address='總統府',
-                    latitude=25.040213810016002,
-                    longitude=121.51238385108306
-                )
-                line_bot_api.reply_message(event.reply_token, location_message)
-            else:
-                line_bot_api.reply_message(event.reply_token, TextSendMessage(message))
-'''

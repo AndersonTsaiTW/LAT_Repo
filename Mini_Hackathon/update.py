@@ -21,7 +21,7 @@ project_id = 'b8fac83d-ed5b-4ce9-be83-00ed0a1e4445'
 tags = trainer.get_tags(project_id)
 
 # 資料夾路徑
-folder_path = 'C:/Users/L3510/Desktop/備分/Images/'
+folder_path = './update/'
 folder_name = ['baguette','coconut_tart','donut','egg_tart',
        'garlic_bread','parmesan_cheese_bread','pineapple_bun',
        'red_bean_bun','white_bread','yolk_pastry']
