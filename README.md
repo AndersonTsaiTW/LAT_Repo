@@ -37,7 +37,7 @@ Use Microsoft AZURE Language Model and LineBot to build an simple test : [Link](
 * Combined with the JSON SERVER provided by AZURE, the analysis results are stored in the cloud, and plotly is used to make simple analysis charts: [code - html](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/index.html), [code - js](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/main.js)
 
 ## 專題連結區 - 麵包探險家(Bread Explorer)
-* Members: [數學113 蔡尚峰Shawn](https://github.com/Shawn0604)、[機電113 鍾孟霖](https://github.com/mlchung1231)、[選讀 蔡昱宏](https://github.com/AndersonTsaiTW)
+* Members: [數學113 蔡尚峰Shawn](https://github.com/Shawn0604)、[機電113 鍾孟霖](https://github.com/mlchung1231)、[選讀 蔡昱宏Anderson](https://github.com/AndersonTsaiTW)
 * Project Features:  
   1. Assist Chinese-speaking students to learn English related to bread in daily life.
   2. Combine LineBOT, AZURE, chatGPT and other software to create Line friends who can assist you wherever you go.
