@@ -65,7 +65,9 @@ index_rec = ""
 def handle_message(event):
     #宣告全域變數，並監控全域變數狀態
     global breadtag_rec, reply_rec, rec, pic, path_rec, pic_copy, fake, index_rec
-    print(breadtag_rec, reply_rec[0:10], rec, pic, path_rec, pic_copy, fake, index_rec) 
+    print("breadtag_rec:",breadtag_rec, "reply_rec:", reply_rec[0:10],
+    "rec:", rec, "pic:", pic,"path_rec:", path_rec, "pic_copy:", pic_copy,
+    "fake:", fake, "index_rec:", index_rec) 
     #判斷網址的狀況，並把網址送入azure分析後，到chatGPT產結果回傳
     if isinstance(event.message, TextMessage):
         if event.message.text.startswith("https:"):
@@ -81,7 +83,7 @@ def handle_message(event):
                 #用fakeGPT取出這種麵包有幾筆記錄，目前的回覆評價加總是多少
                 fakegpt = chatgptENG_cal.fakegptfn(breadtag)
                 #計算仍要使用chatGPT的機率，至少保持20%以便讓新的回應能夠生成
-                #把chatGPT回應的價值度預設為5，再去計算這個回應佔限有價值度多少
+                #把chatGPT回應的價值度預設為5，再去計算這個回應佔現有價值度多少
                 #如果現在一個有效回應都沒有，或是儲存的回應都是0分，會100%取chatGPT產回應
                 #隨著有效回應越來越多，會持續減少使用chatGPT的數量到20%
                 real_p = max(0.2, 5 / (fakegpt[0]+5))
@@ -98,7 +100,8 @@ def handle_message(event):
                 reply_rec = reply_text
                 rec = True
 
-                print("correct")
+                #print("correct")
+                #回覆意見選單
                 satisfaction_message = TemplateSendMessage(
                     alt_text='滿意程度評價',
                     template=ButtonsTemplate(
@@ -111,7 +114,7 @@ def handle_message(event):
                         ]
                     )
                 )
-                # 回复答案消息和滿意度評價選單消息
+                # 回覆答案消息和滿意度評價選單消息
                 line_bot_api.reply_message(event.reply_token, 
                 [TextSendMessage(text=reply_text), satisfaction_message])
                 #print(breadtag_rec)
@@ -119,7 +122,7 @@ def handle_message(event):
                 #print(rec)
                 #return breadtag_rec, reply_rec, rec
 
-        ###以下是儲存程式碼區###
+        ###以下是依使用者回覆進行儲存的程式碼區###
         #如果是fakeGPT的假訊息，紀錄回覆評價，無論他是什麼值
         #因為他條件最多，所以要放最前面
         elif event.message.text in ["2","1","0","-1"] and rec and fake:
@@ -133,7 +136,7 @@ def handle_message(event):
             fake = False
             index_rec = ""
 
-        #用戶如果還算滿意就記錄起來
+        #chatGPT的回應，用戶如果還算滿意就記錄起來
         elif event.message.text in ["2","1","0"] and rec:
             line_bot_api.reply_message(event.reply_token, 
             TextSendMessage(text="謝謝你，我們會再努力"))
@@ -143,8 +146,9 @@ def handle_message(event):
             rec = False
             pic = False
 
-        #類別不對而且是照片的時候，存起來以後訓練模型用
+        #類別不對而且是照片的時候，照片存起來以後訓練模型用
         elif event.message.text =='-1' and rec and pic:
+            #原本想使用麵包清單自動建立lineBOT選單，尚未完成
             '''
             options = list(config.breaddict.keys())
 
@@ -173,7 +177,7 @@ def handle_message(event):
                 template=carousel_template
             )
             '''
-            #content = 
+            #想紀錄、是照片、而且使用者說類別錯誤=打開照片紀錄開關
             pic_copy = True
 
             content = "真抱歉，我們會再努力，那這張照片是以下這些麵包的其中一種嗎？\n請幫我輸入他們的英文名稱告訴我喔，謝謝你的幫忙～\n"
@@ -188,9 +192,9 @@ def handle_message(event):
 
             line_bot_api.reply_message(event.reply_token, 
             TextSendMessage(text=content+breadlist_msg+content_last))
-
+        #訊息是麵包名稱，而且痊癒變數判斷是要紀錄的照片時，把照片另外依類別存檔
         elif (event.message.text in config.breaddict or event.message.text == "all_wrong") and rec and pic and pic_copy:
-
+            #存到各自分類資料夾，以時間作為檔名
             target_folder = "./update/{}/".format(event.message.text)
             current_time = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
             target_filename = current_time + ".jpg"
@@ -210,7 +214,7 @@ def handle_message(event):
             path_rec = ""
             pic_copy = False
 
-        #用戶不滿意就說抱歉，不記錄，並且清空全域變量
+        #非照片訊息，用戶不滿意就說抱歉，不記錄，並且清空全域變量
         elif event.message.text == '-1' and rec:
             line_bot_api.reply_message(event.reply_token, 
             TextSendMessage(text="真抱歉，我們會再努力"))
