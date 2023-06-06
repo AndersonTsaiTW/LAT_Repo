@@ -1,10 +1,11 @@
 ## 麵包探險家(Bread Explorer)
 ###### 期末專題(end-of-semester project) 
-* 專案成員 / Members: [數學113 蔡尚峰Shawn](https://github.com/Shawn0604)、[機電113 鍾孟霖](https://github.com/mlchung1231)、[選讀 蔡昱宏Anderson](https://github.com/AndersonTsaiTW)
+* 專案成員 / Members: [數學113 蔡尚峰 / Shawn](https://github.com/Shawn0604)、[機電113 鍾孟霖](https://github.com/mlchung1231)、[選讀 蔡昱宏 / Anderson](https://github.com/AndersonTsaiTW)
 * 專案特色 / Project Features:  
-  1. Assist Chinese-speaking students to learn English related to bread in daily life.
-  2. Combine LineBOT, AZURE, chatGPT and other software to create Line friends who can assist you wherever you go.
-  3. Introduce a user feedback mechanism so that the service can continue to self-optimize.
+專案特點：
+  1. 協助華語學生學習日常生活中與麵包相關的英語。 / Assist Chinese-speaking students to learn English related to bread in daily life.
+  2. 結合 LineBOT、AZURE、chatGPT 等軟件，打造隨時隨地為您提供幫助的 Line 好友。 / Combine LineBOT, AZURE, chatGPT and other software to create Line friends who can assist you wherever you go.
+  3. 引入用戶反饋機制，讓服務持續自我優化。 / Introduce a user feedback mechanism so that the service can continue to self-optimize.
 * [主程式資料夾 / Folder - Mini_Hackathon](https://github.com/AndersonTsaiTW/LAT_Repo/tree/main/Mini_Hackathon): You can find all the codes here (written in python), including the [主程式碼 / main code](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Mini_Hackathon/Bread_Explorer.py), AZURE電腦視覺模型 / AZURE related codes: [url_bread](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Mini_Hackathon/url_bread.py) and [local_bread](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Mini_Hackathon/local_bread.py), [chatGPT相關程式碼 / chatGPT related codes](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Mini_Hackathon/chatgptENG_cal.py), and [google map相關程式碼 / google map related codes](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Mini_Hackathon/nearby_bakeries.py). 
 
 ### [ 目標使用者 / target user ]
