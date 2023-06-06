@@ -36,7 +36,7 @@ Use Microsoft AZURE Language Model and LineBot to build an simple test : [Link](
 * Using line's virtual identity, combined with Azure's emotion discrimination and message topic extraction functions, automatically analyze customer feedback messages: [code](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/index.js)
 * Combined with the JSON SERVER provided by AZURE, the analysis results are stored in the cloud, and plotly is used to make simple analysis charts: [code - html](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/index.html), [code - js](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/main.js)
 
-## 專題連結區(end-of-semester project) - 麵包探險家(Bread Explorer)
+## 專題連結區(end-of-semester project) - [麵包探險家(Bread Explorer)](https://github.com/AndersonTsaiTW/LAT_Repo/tree/main/Mini_Hackathon)
 * Members: [數學113 蔡尚峰Shawn](https://github.com/Shawn0604)、[機電113 鍾孟霖](https://github.com/mlchung1231)、[選讀 蔡昱宏Anderson](https://github.com/AndersonTsaiTW)
 * Project Features:  
   1. Assist Chinese-speaking students to learn English related to bread in daily life.
