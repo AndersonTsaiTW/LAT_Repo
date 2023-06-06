@@ -1,8 +1,23 @@
 ## 麵包探險家(Bread Explorer)
 ###### 期末專題(end-of-semester project) 
-* Members: [數學113 蔡尚峰Shawn](https://github.com/Shawn0604)、[機電113 鍾孟霖](https://github.com/mlchung1231)、[選讀 蔡昱宏Anderson](https://github.com/AndersonTsaiTW)
-* Project Features:  
+* 專案成員 / Members: [數學113 蔡尚峰Shawn](https://github.com/Shawn0604)、[機電113 鍾孟霖](https://github.com/mlchung1231)、[選讀 蔡昱宏Anderson](https://github.com/AndersonTsaiTW)
+* 專案特色 / Project Features:  
   1. Assist Chinese-speaking students to learn English related to bread in daily life.
   2. Combine LineBOT, AZURE, chatGPT and other software to create Line friends who can assist you wherever you go.
   3. Introduce a user feedback mechanism so that the service can continue to self-optimize.
-* [Folder - Mini_Hackathon](https://github.com/AndersonTsaiTW/LAT_Repo/tree/main/Mini_Hackathon): You can find all the codes here (written in python), including the [main code](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Mini_Hackathon/Bread_Explorer.py), AZURE related codes: [url_bread](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Mini_Hackathon/url_bread.py) and [local_bread](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Mini_Hackathon/local_bread.py), [chatGPT related codes](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Mini_Hackathon/chatgptENG_cal.py), and [google map related codes](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Mini_Hackathon/nearby_bakeries.py).  
+* [主程式資料夾 / Folder - Mini_Hackathon](https://github.com/AndersonTsaiTW/LAT_Repo/tree/main/Mini_Hackathon): You can find all the codes here (written in python), including the [主程式碼 / main code](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Mini_Hackathon/Bread_Explorer.py), AZURE電腦視覺模型 / AZURE related codes: [url_bread](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Mini_Hackathon/url_bread.py) and [local_bread](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Mini_Hackathon/local_bread.py), [chatGPT相關程式碼 / chatGPT related codes](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Mini_Hackathon/chatgptENG_cal.py), and [google map相關程式碼 / google map related codes](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Mini_Hackathon/nearby_bakeries.py). 
+
+### [ 目標使用者 / target user ]
+<img width="1280" alt="Screenshot 2023-06-06 at 7 25 23 PM" src="https://github.com/AndersonTsaiTW/LAT_Repo/assets/113076298/c50219b9-d77f-4fbc-99fb-06aaadc00451">  
+  
+### [ 使用者操作流程 / User Operation Process ]
+<img width="1280" alt="Screenshot 2023-06-06 at 7 25 59 PM" src="https://github.com/AndersonTsaiTW/LAT_Repo/assets/113076298/73046b88-4956-4f81-abb3-01b2518af65f">  
+  
+### [ 技術架構 / technical structure ]  
+<img width="1280" alt="Screenshot 2023-06-06 at 7 26 41 PM" src="https://github.com/AndersonTsaiTW/LAT_Repo/assets/113076298/7fb60aef-4370-4ff6-88cc-632c082668d5">  
+  
+### [ QR code ]：如果你想實際測試，請聯絡製作團隊 / If you want to actually test it, please contact the production team  
+![BreadExplorerQRcode](https://github.com/AndersonTsaiTW/LAT_Repo/assets/113076298/7355e154-e0fc-40c3-a6b6-1cc938665c14)
+
+感謝您對本專案的關注，如果您對本專案有任何看法或是意見，請不吝惜向製作團隊提供意見。感謝。 / Thank you for your attention to this project. If you have any views or comments on this project, please feel free to provide comments to the production team. grateful.
+
