@@ -49,4 +49,6 @@ Use Microsoft AZURE Language Model and LineBot to build an simple test : [Link](
 * [ QR code ]：如果你想實際測試，請聯絡製作團隊 / If you want to actually test it, please contact us  
 ![BreadExplorerQRcode](https://github.com/AndersonTsaiTW/LAT_Repo/assets/113076298/7355e154-e0fc-40c3-a6b6-1cc938665c14)
 
+感謝您對麵包探險家(Bread Explorer)專案的關注，如果您有任何看法或是意見，請不吝惜向製作團隊提供意見。感謝。 / Thank you for your attention to this project. If you have any views or comments on this project, please feel free to provide comments to the production team. grateful. (e-mail: AndersonTsaiTW@gmail.com)
+
 ## 其他補充
