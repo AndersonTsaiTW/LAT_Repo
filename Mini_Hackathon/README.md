@@ -1,5 +1,6 @@
 ## 麵包探險家(Bread Explorer)
 ###### 期末專題(end-of-semester project) 
+* 專案影片 / project video[(連結 / Link)](https://www.youtube.com/watch?v=8w7uTnBEiGQ&ab_channel=AndersonTsai)
 * 專案說明投影片 / Project Description ppt [(連結 / Link)](https://drive.google.com/drive/folders/1O0YNpWWHMssmgJTJc4bRilS4C7HKuTLE)
 * 專案成員 / Members: [數學113 蔡尚峰 / Shawn](https://github.com/Shawn0604)、[機電113 鍾孟霖](https://github.com/mlchung1231)、[選讀 蔡昱宏 / Anderson](https://github.com/AndersonTsaiTW)
 * 指導老師 / project advisor: 蔡芸琤 / Pecu、鍾祥仁 / Ryan
