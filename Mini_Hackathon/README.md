@@ -22,5 +22,14 @@
 ### [ QR code ]：如果你想實際測試，請聯絡製作團隊 / If you want to actually test it, please contact the production team  
 ![BreadExplorerQRcode](https://github.com/AndersonTsaiTW/LAT_Repo/assets/113076298/7355e154-e0fc-40c3-a6b6-1cc938665c14)
 
+### 如果你想自己玩玩看 / if you want to play for yourself
+0. 如果AZURE模型已失效，則無法測試 / Cannot test if the AZURE model is dead 
+1. 下載資料夾程式碼 / Download the folder code
+2. 建立自己的line頻道，取得token及secret / Create your own line channel, get token and secret
+3. 取得自己的openAI API token，在同一個資料夾建立 key.txt，直接寫入 / Obtain your own openAI API token, create key.txt in the same folder, and write directly
+4. 啟動ngrok，本地port使用3001(./ngrok http 3001)，將網址更新到line頻道 / Start ngrok, use 3001 (./ngrok http 3001) for the local port, and update the URL to the line channel
+5. 啟動 Bread_Explorer.py 主程式 / Start the main program: Bread_Explorer.py
+6. 與lineBOT對話  / chat with lineBOT
+
 感謝您對本專案的關注，如果您對本專案有任何看法或是意見，請不吝惜向製作團隊提供意見。感謝。 / Thank you for your attention to this project. If you have any views or comments on this project, please feel free to provide comments to the production team. grateful. (e-mail: AndersonTsaiTW@gmail.com)
 
