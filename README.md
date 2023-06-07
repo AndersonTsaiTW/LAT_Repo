@@ -37,6 +37,7 @@ Use Microsoft AZURE Language Model and LineBot to build an simple test : [Link](
 * Combined with the JSON SERVER provided by AZURE, the analysis results are stored in the cloud, and plotly is used to make simple analysis charts: [code - html](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/index.html), [code - js](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/main.js)
 
 ## 專題連結區(end-of-semester project) - [麵包探險家(Bread Explorer)](https://github.com/AndersonTsaiTW/LAT_Repo/tree/main/Mini_Hackathon)
+* 專案影片 / project video[(連結 / Link)](https://www.youtube.com/watch?v=8w7uTnBEiGQ&ab_channel=AndersonTsai)
 * 專案說明投影片 / Project Description ppt [(連結 / Link)](https://drive.google.com/drive/folders/1O0YNpWWHMssmgJTJc4bRilS4C7HKuTLE)
 * 專案成員 / Members: [數學113 蔡尚峰 / Shawn](https://github.com/Shawn0604)、[機電113 鍾孟霖](https://github.com/mlchung1231)、[選讀 蔡昱宏 / Anderson](https://github.com/AndersonTsaiTW)
 * 指導老師 / Project advisor: 蔡芸琤 / Pecu、鍾祥仁 / Ryan
@@ -50,6 +51,6 @@ Use Microsoft AZURE Language Model and LineBot to build an simple test : [Link](
 * [ QR code ]：如果你想實際測試，請聯絡製作團隊 / If you want to actually test it, please contact us  
 ![BreadExplorerQRcode](https://github.com/AndersonTsaiTW/LAT_Repo/assets/113076298/7355e154-e0fc-40c3-a6b6-1cc938665c14)
 
-感謝您對麵包探險家(Bread Explorer)專案的關注，如果您有任何看法或是意見，請不吝惜向製作團隊提供意見。感謝。 / Thank you for your attention to this project. If you have any views or comments on this project, please feel free to provide comments to the production team. grateful. (e-mail: AndersonTsaiTW@gmail.com)
+#### 感謝您對麵包探險家(Bread Explorer)專案的關注，如果您有任何看法或是意見，請不吝惜向製作團隊提供意見。感謝。 / Thank you for your attention to this project. If you have any views or comments on this project, please feel free to provide comments to the production team. grateful. (e-mail: AndersonTsaiTW@gmail.com)
 
 ## 其他補充
