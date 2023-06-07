@@ -31,5 +31,5 @@
 5. 啟動 Bread_Explorer.py 主程式 / Start the main program: Bread_Explorer.py
 6. 與lineBOT對話  / chat with lineBOT
 
-感謝您對本專案的關注，如果您對本專案有任何看法或是意見，請不吝惜向製作團隊提供意見。感謝。 / Thank you for your attention to this project. If you have any views or comments on this project, please feel free to provide comments to the production team. grateful. (e-mail: AndersonTsaiTW@gmail.com)
+#### 感謝您對本專案的關注，如果您對本專案有任何看法或是意見，請不吝惜向製作團隊提供意見。感謝。 / Thank you for your attention to this project. If you have any views or comments on this project, please feel free to provide comments to the production team. grateful. (e-mail: AndersonTsaiTW@gmail.com)
 
