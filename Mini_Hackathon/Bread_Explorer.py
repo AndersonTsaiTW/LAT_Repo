@@ -126,25 +126,39 @@ def handle_message(event):
         #如果是fakeGPT的假訊息，紀錄回覆評價，無論他是什麼值
         #因為他條件最多，所以要放最前面
         elif event.message.text in ["2","1","0","-1"] and rec and fake:
+            try:
+                chatgptENG_cal.breadfakerecord(breadtag_rec, index_rec, int(event.message.text))
+
+                breadtag_rec, reply_rec, path_rec, index_rec = ""
+                rec, pic, pic_copy, fake = False
+                #breadtag_rec = ""
+                #reply_rec = ""
+                #rec = False
+                #pic = False
+                #fake = False
+                #index_rec = ""
+
+            except(KeyError, IndexError):
+                breadtag_rec, reply_rec, path_rec, index_rec = ""
+                rec, pic, pic_copy, fake = False
+
+
             line_bot_api.reply_message(event.reply_token, 
             TextSendMessage(text="謝謝你，我們會再努力"))
-            chatgptENG_cal.breadfakerecord(breadtag_rec, index_rec, int(event.message.text))
-            breadtag_rec = ""
-            reply_rec = ""
-            rec = False
-            pic = False
-            fake = False
-            index_rec = ""
+            #breadtag_rec, reply_rec, path_rec, index_rec = ""
+            #rec, pic, pic_copy, fake = False
 
         #chatGPT的回應，用戶如果還算滿意就記錄起來
         elif event.message.text in ["2","1","0"] and rec:
             line_bot_api.reply_message(event.reply_token, 
             TextSendMessage(text="謝謝你，我們會再努力"))
             chatgptENG_cal.breadchatrecord(breadtag_rec, reply_rec, int(event.message.text))
-            breadtag_rec = ""
-            reply_rec = ""
-            rec = False
-            pic = False
+            breadtag_rec, reply_rec, path_rec, index_rec = ""
+            rec, pic, pic_copy, fake = False
+            #breadtag_rec = ""
+            #reply_rec = ""
+            #rec = False
+            #pic = False
 
         #類別不對而且是照片的時候，照片存起來以後訓練模型用
         elif event.message.text =='-1' and rec and pic:
@@ -207,22 +221,26 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token, 
             TextSendMessage(text="謝謝你，我們會繼續變厲害的～"))
             #reset全域變數
-            breadtag_rec = ""
-            reply_rec = ""
-            rec = False
-            pic = False
-            path_rec = ""
-            pic_copy = False
+            breadtag_rec, reply_rec, path_rec, index_rec = ""
+            rec, pic, pic_copy, fake = False
+            #breadtag_rec = ""
+            #reply_rec = ""
+            #rec = False
+            #pic = False
+            #path_rec = ""
+            #pic_copy = False
 
         #非照片訊息，用戶不滿意就說抱歉，不記錄，並且清空全域變量
         elif event.message.text == '-1' and rec:
             line_bot_api.reply_message(event.reply_token, 
             TextSendMessage(text="真抱歉，我們會再努力"))
             #reset全域變數
-            breadtag_rec = ""
-            reply_rec = ""
-            rec = False
-            pic = False
+            breadtag_rec, reply_rec, path_rec, index_rec = ""
+            rec, pic, pic_copy, fake = False
+            #breadtag_rec = ""
+            #reply_rec = ""
+            #rec = False
+            #pic = False
         
 
         ###以上是儲存程式碼區###
@@ -436,13 +454,13 @@ def handle_message(event):
                 fake = True
             else:
                 reply_text = chatgptENG_cal.chatgptfn(breadtag)
+                path_rec = path
             #全域變數：麵包tag紀錄、回覆訊息記錄、紀錄開關open
             #全域變數：圖片開關open、圖像檔path紀錄
             breadtag_rec = breadtag
             reply_rec = reply_text
             rec = True
             pic = True
-            path_rec = path
 
             #回饋選單
             satisfaction_message = TemplateSendMessage(
