@@ -129,8 +129,8 @@ def handle_message(event):
             try:
                 chatgptENG_cal.breadfakerecord(breadtag_rec, index_rec, int(event.message.text))
 
-                breadtag_rec, reply_rec, path_rec, index_rec = ""
-                rec, pic, pic_copy, fake = False
+                breadtag_rec = reply_rec = path_rec = index_rec = ""
+                rec = pic = pic_copy = fake = False
                 #breadtag_rec = ""
                 #reply_rec = ""
                 #rec = False
@@ -139,8 +139,8 @@ def handle_message(event):
                 #index_rec = ""
 
             except(KeyError, IndexError):
-                breadtag_rec, reply_rec, path_rec, index_rec = ""
-                rec, pic, pic_copy, fake = False
+                breadtag_rec = reply_rec = path_rec = index_rec = ""
+                rec = pic = pic_copy = fake = False
 
 
             line_bot_api.reply_message(event.reply_token, 
@@ -153,8 +153,8 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token, 
             TextSendMessage(text="謝謝你，我們會再努力"))
             chatgptENG_cal.breadchatrecord(breadtag_rec, reply_rec, int(event.message.text))
-            breadtag_rec, reply_rec, path_rec, index_rec = ""
-            rec, pic, pic_copy, fake = False
+            breadtag_rec = reply_rec = path_rec = index_rec = ""
+            rec = pic = pic_copy = fake = False
             #breadtag_rec = ""
             #reply_rec = ""
             #rec = False
@@ -221,8 +221,8 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token, 
             TextSendMessage(text="謝謝你，我們會繼續變厲害的～"))
             #reset全域變數
-            breadtag_rec, reply_rec, path_rec, index_rec = ""
-            rec, pic, pic_copy, fake = False
+            breadtag_rec = reply_rec = path_rec = index_rec = ""
+            rec = pic = pic_copy = fake = False
             #breadtag_rec = ""
             #reply_rec = ""
             #rec = False
@@ -235,8 +235,8 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token, 
             TextSendMessage(text="真抱歉，我們會再努力"))
             #reset全域變數
-            breadtag_rec, reply_rec, path_rec, index_rec = ""
-            rec, pic, pic_copy, fake = False
+            breadtag_rec = reply_rec = path_rec = index_rec = ""
+            rec = pic = pic_copy = fake = False
             #breadtag_rec = ""
             #reply_rec = ""
             #rec = False
