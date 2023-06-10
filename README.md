@@ -36,6 +36,10 @@ Use Microsoft AZURE Language Model and LineBot to build an simple test : [Link](
 * Using line's virtual identity, combined with Azure's emotion discrimination and message topic extraction functions, automatically analyze customer feedback messages: [code](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/index.js)
 * Combined with the JSON SERVER provided by AZURE, the analysis results are stored in the cloud, and plotly is used to make simple analysis charts: [code - html](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/index.html), [code - js](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/main.js)
 
+#### HW5 - [Landmark English Learner](https://github.com/AndersonTsaiTW/LAT_Repo/tree/main/HW5)
+* [the readme.md](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/HW5/readme.md): Documentation showing the results of program execution
+* Combined with the Wikipedia API, you can quickly learn landmark knowledge whether you are studying online or traveling abroad: [code - html](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/HW5/index.html), [code - js](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/HW5/main.js)
+
 ## 專題連結區(end-of-semester project) - [麵包探險家(Bread Explorer)](https://github.com/AndersonTsaiTW/LAT_Repo/tree/main/Mini_Hackathon)
 * 專案影片 / project video[(連結 / Link)](https://www.youtube.com/watch?v=8w7uTnBEiGQ&ab_channel=AndersonTsai)
 * 專案說明投影片 / Project Description ppt [(連結 / Link)](https://drive.google.com/drive/folders/1O0YNpWWHMssmgJTJc4bRilS4C7HKuTLE)
