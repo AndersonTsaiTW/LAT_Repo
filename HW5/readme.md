@@ -1,22 +1,19 @@
-## HW4 - Customer Review Sentiment Analysis Bot  
-  
+## HW5 - Landmark English Learner  
+As a common culture and memory of mankind, landmarks are worth learning the knowledge behind. Here is an English encyclopedia link so that users can easily learn landmark x English.
+
 ### [程式碼]  
-[[code] - index.js](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/index.js)  
-[[code] - main.js](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/main.js)  
-[[code] - index.html](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/Notes/AZURE%20Language%20model/index.html)  
+[[code] - main.js](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/HW5/main.js)  
+[[code] - index.html](https://github.com/AndersonTsaiTW/LAT_Repo/blob/main/HW5/index.html)  
 
 ### [功能說明]  
-1. 對顧客意見，會給予回應（三種格式一次提供，包含正向/中性/負向、指數、句子的主題）
-<img width="373" alt="image" src="https://github.com/AndersonTsaiTW/LAT_Repo/assets/113076298/254f4785-2212-44de-8155-284a6a08e2c6">
-
-2. 針對不同屬性，會給予不同答案
-<img width="363" alt="image" src="https://github.com/AndersonTsaiTW/LAT_Repo/assets/113076298/5ede089e-b244-45a3-ba00-cc2a38b51458">
-
-3. 如果無法判斷主詞的時候，會調整答案不指定特定單位
-<img width="362" alt="image" src="https://github.com/AndersonTsaiTW/LAT_Repo/assets/113076298/a329d49e-c01c-4a78-ad9d-0d1e182ec135">
-
-4. 答案會自動儲存到雲端JSON Server
-<img width="483" alt="image" src="https://github.com/AndersonTsaiTW/LAT_Repo/assets/113076298/5ab75019-c7cb-44f0-9b82-fef999011083">
-
-5. 並且自動化成圓餅圖檢視目前不同屬性反饋意見比例
-<img width="425" alt="image" src="https://github.com/AndersonTsaiTW/LAT_Repo/assets/113076298/249ee7f2-61a0-4555-92f1-2237479fcaa0">
+1. 網路上如出國旅遊拍照，看見類似地標的照片，可以查詢出圖片中的地標  
+<img width="1195" alt="image" src="https://github.com/AndersonTsaiTW/LAT_Repo/assets/113076298/149fe1f6-acef-4a75-956d-02dc07c89bc6">  
+  
+2. 如果是沒有地標的照片，會秀出"照片裡沒有地標"  
+<img width="1199" alt="image" src="https://github.com/AndersonTsaiTW/LAT_Repo/assets/113076298/3e6f4830-ae2a-4d72-84d3-cab0796fd306">  
+  
+3. 提供維基百科連結  
+<img width="1280" alt="image" src="https://github.com/AndersonTsaiTW/LAT_Repo/assets/113076298/5c16b87b-36a1-438e-985b-7dc226540d01">  
+  
+4. 節錄維基百科內容(建置中)  
+<img width="767" alt="image" src="https://github.com/AndersonTsaiTW/LAT_Repo/assets/113076298/6ef6da9e-92a8-4b70-a861-6bd3aa971eb1">  
