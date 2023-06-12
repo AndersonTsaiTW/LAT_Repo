@@ -46,15 +46,19 @@ function processImageFile(imageObject) {
             //顯示JSON內容
             $("#responseTextArea").val(JSON.stringify(data, null, 2));
             $("#picDescription").empty();
-            $("#picDescription").append("請點擊下方維基百科連結，學習圖中地標的知識");
-            var name = encodeURIComponent(data.categories[0].detail.landmarks[0].name);
-            var url = 'https://en.wikipedia.org/wiki/' + name;
-            $("#picDescription").append('<a href="' + url + '">' + url + '</a>');
-            //$("#picDescription").append("https://en.wikipedia.org/wiki/"+data.categories[0].detail.landmarks.name);
-            //for (var x = 0; x < data.description.captions.length; x++) {
-            //    $("#picDescription").append(data.description.captions[x].text + "<br>");
-            //}
-            // $("#picDescription").append("這裡有"+data.faces.length+"個人");
+            if (data.categories[0].detail) {
+                // 圖片中有地標的情況
+                $("#picDescription").append("請點擊下方維基百科連結，學習圖中地標的知識");
+                var name = encodeURIComponent(data.categories[0].detail.landmarks[0].name);
+                var url = 'https://en.wikipedia.org/wiki/' + name;
+                $("#picDescription").append('<a href="' + url + '">' + url + '</a>');
+                var wiki_content = displaySearchResults(data.categories[0].detail.landmarks[0].name);
+                $("#wikiContent").html(wiki_content);
+            } else {
+                // 圖片中沒有地標的情況
+                $("#picDescription").append("照片裡沒有地標");
+                $("#wikiContent").empty(); // 清空 wiki 內容
+            }
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             //丟出錯誤訊息
@@ -95,14 +99,19 @@ function processImage() {
         //顯示JSON內容
         $("#responseTextArea").val(JSON.stringify(data, null, 2));
         $("#picDescription").empty(); // 清空之前的內容
-        $("#picDescription").append("請點擊下方維基百科連結，學習圖中地標的知識");
-        var name = encodeURIComponent(data.categories[0].detail.landmarks[0].name);
-        var url = 'https://en.wikipedia.org/wiki/' + name;
-        $("#picDescription").append('<a href="' + url + '">' + url + '</a>');
-        var wiki_content = displaySearchResults(data.categories[0].detail.landmarks[0].name);
-        $("#wikiContent").val(JSON.stringify(wiki_content, null, 2));
-        //$("#wikiContent").append('<iframe src="'+ url + '"></iframe>');
-        // $("#picDescription").append("這裡有"+data.faces.length+"個人");
+        if (data.categories[0].detail) {
+            // 圖片中有地標的情況
+            $("#picDescription").append("請點擊下方維基百科連結，學習圖中地標的知識");
+            var name = encodeURIComponent(data.categories[0].detail.landmarks[0].name);
+            var url = 'https://en.wikipedia.org/wiki/' + name;
+            $("#picDescription").append('<a href="' + url + '">' + url + '</a>');
+            var wiki_content = displaySearchResults(data.categories[0].detail.landmarks[0].name);
+            $("#wikiContent").html(wiki_content);
+        } else {
+            // 圖片中沒有地標的情況
+            $("#picDescription").append("照片裡沒有地標");
+            $("#wikiContent").empty(); // 清空 wiki 內容
+        }
     })
     .fail(function(jqXHR, textStatus, errorThrown) {
         //丟出錯誤訊息
