@@ -58,3 +58,6 @@ Use Microsoft AZURE Language Model and LineBot to build an simple test : [Link](
 #### 感謝您對麵包探險家(Bread Explorer)專案的關注，如果您有任何看法或是意見，請不吝惜向製作團隊提供意見。感謝。 / Thank you for your attention to this project. If you have any views or comments on this project, please feel free to provide comments to the production team. grateful. (e-mail: AndersonTsaiTW@gmail.com)
 
 ## 其他補充
+* 專案優化機會(感謝Ryan老師建議)：MLOps  
+[MLOps — 機器學習的開發流程與軟體開發DevOps流程的結合](https://hermanwu.medium.com/mlops-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E7%9A%84%E9%96%8B%E7%99%BC%E6%B5%81%E7%A8%8B%E8%88%87%E8%BB%9F%E9%AB%94%E9%96%8B%E7%99%BCdevops%E6%B5%81%E7%A8%8B%E7%9A%84%E7%B5%90%E5%90%88-588014202c0a)  
+[機器學習作業 (MLOps) 架構透過 Azure Machine Learning 升級機器學習生命週期](https://learn.microsoft.com/zh-tw/azure/architecture/example-scenario/mlops/mlops-technical-paper)
